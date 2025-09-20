@@ -1,187 +1,42 @@
-/* ============================= */
-/* RESET & BASE                  */
-/* ============================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+/* RESET & BASE */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body {background:url('img/bg-hero.jpg') no-repeat center center fixed;background-size:cover;color:#0a3d62;line-height:1.6;}
 
-body {
-    background: url('img/bg-main.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #0a3d62;
-    line-height: 1.6;
-}
+/* HEADER / HERO */
+header {text-align:center;position:sticky;top:0;background:rgba(255,255,255,0.9);padding-bottom:20px;z-index:100;}
+.hero {padding:60px 20px;background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg-hero.jpg') center/cover no-repeat;color:#fff;border-radius:15px;margin:20px;}
+.hero h1{font-size:3rem;font-weight:700;}
+.hero p{font-size:1.2rem;margin:15px 0;}
+.hero .btn{background:#fcbf49;color:#0a3d62;transition:0.3s;}
+.hero .btn:hover{background:#ff6b6b;transform:scale(1.05);}
 
-/* ============================= */
-/* HEADER / NAVBAR               */
-/* ============================= */
-header {
-    background-color: rgba(255,255,255,0.85);
-    padding: 20px 40px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+/* NAVBAR */
+nav{margin:20px;}
+nav a{margin:5px 10px;padding:8px 18px;font-weight:600;color:#fff;background:#fcbf49;border-radius:8px;text-decoration:none;transition:all 0.3s;}
+nav a:hover{transform:scale(1.05);background:#ff6b6b;}
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #0a3d62;
-}
+/* SECTION */
+section{padding:60px 20px;max-width:1200px;margin:40px auto;background:rgba(255,255,255,0.85);border-radius:15px;opacity:0;transform:translateY(30px);transition:all 0.8s;}
+section.show{opacity:1;transform:translateY(0);}
+h2{text-align:center;font-size:2rem;margin-bottom:20px;}
+p{margin-bottom:15px;font-size:1.1rem;}
 
-nav {
-    margin-top: 10px;
-}
+/* CARD */
+.doc-card,.proker-item,.sekbid-item{background:rgba(255,255,255,0.95);border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 3px 10px rgba(0,0,0,0.2);opacity:0;transform:translateY(20px);transition:all 0.8s;}
+.doc-card.show,.proker-item.show,.sekbid-item.show{opacity:1;transform:translateY(0);}
+.doc-card img,.proker-item img,.sekbid-item img{width:100%;border-radius:12px;margin-bottom:10px;}
 
-nav a {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 8px 18px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #0984e3;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+/* TABEL */
+table{width:100%;border-collapse:collapse;margin-top:20px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,0.2);opacity:0;transform:translateY(20px);transition:all 0.8s;}
+table.show{opacity:1;transform:translateY(0);}
+table th, table td{padding:12px 15px;text-align:center;}
+table th{background:#fcbf49;color:#0a3d62;font-weight:600;}
+table tr:nth-child(even){background:#f1f1f1;}
+table tr:hover{background:#ffe066;}
 
-nav a:hover {
-    transform: scale(1.05);
-    background-color: #74b9ff;
-}
+/* FOOTER */
+footer{text-align:center;padding:20px 0;background:rgba(255,255,255,0.9);border-top:1px solid #ccc;}
+footer p{font-size:0.9rem;}
 
-/* ============================= */
-/* BUTTONS                        */
-/* ============================= */
-button, .btn {
-    padding: 10px 20px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #fdcb6e;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-button:hover, .btn:hover {
-    transform: scale(1.05);
-    background-color: #f39c12;
-}
-
-/* ============================= */
-/* SECTION / CARD / TABEL        */
-/* ============================= */
-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgba(255,255,255,0.85);
-    border-radius: 15px;
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-.card, .doc-card, .proker-item, .sekbid-item {
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.card.show, .doc-card.show, .proker-item.show, .sekbid-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.card img, .doc-card img, .proker-item img, .sekbid-item img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
-}
-
-table.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-table th, table td {
-    padding: 12px 15px;
-    text-align: center;
-}
-
-table th {
-    background-color: #0984e3;
-    color: #fff;
-    font-weight: 600;
-}
-
-table tr:nth-child(even) {
-    background-color: #f1f1f1;
-}
-
-table tr:hover {
-    background-color: #dfe6e9;
-}
-
-/* ============================= */
-/* FOOTER                         */
-/* ============================= */
-footer {
-    background-color: rgba(255,255,255,0.85);
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #ccc;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* ============================= */
-/* MEDIA QUERIES                 */
-/* ============================= */
-@media screen and (max-width:768px){
-    header h1{font-size:2rem;}
-    nav a{padding:6px 12px;font-size:0.9rem;}
-}
+/* MEDIA QUERIES */
+@media screen and (max-width:768px){.hero h1{font-size:2rem;}nav a{padding:6px 12px;font-size:0.9rem;}}
