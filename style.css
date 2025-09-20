@@ -9,16 +9,13 @@
 }
 
 body {
-    background: linear-gradient(120deg, #ffafbd, #ffc3a0, #2193b0, #6dd5ed);
+    background: linear-gradient(120deg, #a0c4ff, #ffd60a, #ffffff, #00000010);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #fff;
+    animation: gradientBG 20s ease infinite;
+    color: #000;
     line-height: 1.6;
 }
 
-/* ============================= */
-/* ANIMATED BACKGROUND            */
-/* ============================= */
 @keyframes gradientBG {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -26,23 +23,24 @@ body {
 }
 
 /* ============================= */
-/* HEADER / NAVBAR STYLES        */
+/* HEADER / NAVBAR               */
 /* ============================= */
 header {
-    background-color: rgba(0,0,0,0.6);
-    padding: 25px 40px;
+    background-color: rgba(0,0,0,0.05);
+    padding: 20px 40px;
     text-align: center;
+    border-bottom: 2px solid #ffd60a;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #fff;
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 900;
+    color: #0a3d62;
     letter-spacing: 2px;
-    text-shadow: 2px 2px #000;
+    text-shadow: 1px 1px #fff;
 }
 
 nav {
@@ -51,68 +49,85 @@ nav {
 
 nav a {
     display: inline-block;
-    margin: 0 15px;
+    margin: 5px 10px;
     padding: 10px 20px;
-    color: #fff;
     font-weight: 700;
-    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(45deg, #74b9ff, #fdcb6e);
+    border-radius: 12px;
     text-decoration: none;
-    transition: 0.4s;
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
 }
 
 nav a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    background: linear-gradient(45deg, #42e695, #3bb2b8);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #0984e3, #fdc830);
 }
 
 /* ============================= */
-/* BUTTONS FULL STYLE             */
+/* BUTTONS STYLE                 */
 /* ============================= */
 button, .btn {
-    padding: 15px 30px;
-    font-size: 1.1rem;
+    padding: 12px 25px;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
+    background: linear-gradient(45deg, #74b9ff, #fdcb6e);
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    margin: 10px;
-    transition: 0.4s;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    margin: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 button:hover, .btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    background: linear-gradient(45deg, #42e695, #3bb2b8);
-    color: #000;
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #0984e3, #fdc830);
+}
+
+/* BUTTON ANIMATION PATH EFFECT */
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg) translateX(-100%);
+    transition: all 0.6s ease;
+}
+
+button:hover::before {
+    transform: rotate(45deg) translateX(100%);
 }
 
 /* ============================= */
-/* SECTION / CONTENT STYLES      */
+/* SECTION / CONTENT             */
 /* ============================= */
 section {
     padding: 60px 20px;
     max-width: 1200px;
     margin: auto;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.05);
     border-radius: 20px;
     margin-bottom: 40px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 25px;
-    color: #fff;
-    text-shadow: 1px 1px #000;
+    color: #0a3d62;
+    text-shadow: 1px 1px #fff;
 }
 
 p {
@@ -121,78 +136,77 @@ p {
 }
 
 /* ============================= */
-/* CARDS / BOXES STYLES          */
+/* TABLE STYLES                  */
 /* ============================= */
-.card, .doc-card, .proker-item {
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
     background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table th {
+    background: #74b9ff;
+    color: #fff;
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+table tr:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* ============================= */
+/* CARDS / OBJECTS               */
+/* ============================= */
+.card, .doc-card, .proker-item, .sekbid-item {
+    background: rgba(255,255,255,0.08);
     border-radius: 20px;
     padding: 25px;
     margin: 15px 0;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.4s;
 }
 
-.card:hover, .doc-card:hover, .proker-item:hover {
-    background: rgba(255,255,255,0.2);
+.card:hover, .doc-card:hover, .proker-item:hover, .sekbid-item:hover {
     transform: translateY(-8px) scale(1.05);
+    background: rgba(255,255,255,0.18);
 }
 
 /* ============================= */
-/* INDEX.HTML HERO SECTION        */
+/* GRID / LAYOUT                 */
 /* ============================= */
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    border-radius: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #000;
-}
-
-.hero p {
-    font-size: 1.4rem;
-}
-
-/* ============================= */
-/* DOKUMENTASI.HTML SPECIFIC      */
-/* ============================= */
-.docs img {
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-}
-
-/* ============================= */
-/* PROKER.HTML SPECIFIC           */
-/* ============================= */
-.proker-list {
+.proker-list, .sekbid-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
 /* ============================= */
-/* FOOTER STYLES                 */
+/* FOOTER                        */
 /* ============================= */
 footer {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.05);
     text-align: center;
-    padding: 25px 0;
-    border-top: 2px solid #fff;
+    padding: 20px 0;
+    border-top: 2px solid #ffd60a;
 }
 
 footer p {
-    color: #fff;
     font-size: 0.9rem;
+    color: #000;
 }
 
 /* ============================= */
@@ -200,10 +214,6 @@ footer p {
 /* ============================= */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
-    }
-
-    .hero h1 {
         font-size: 2rem;
     }
 
