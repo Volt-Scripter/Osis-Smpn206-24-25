@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function(){
         tables.forEach(t => {if(t.getBoundingClientRect().top<trigger)t.classList.add('show');});
     }
 
-    // Tombol hover
     buttons.forEach(btn=>{
         btn.addEventListener('mouseenter',()=>{btn.style.transform="scale(1.08)";});
         btn.addEventListener('mouseleave',()=>{btn.style.transform="scale(1)";});
