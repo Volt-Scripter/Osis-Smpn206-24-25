@@ -1,45 +1,72 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
 }
 
-header {
-  background-color: #004aad; /* biru */
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=1500&q=80') no-repeat center center/cover;
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #FFD700; /* kuning */
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.menu-buttons {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: yellow; /* kuning */
+.btn {
+  background: #1E90FF; /* biru */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #104E8B;
+  transform: scale(1.05);
+}
+
+/* Section */
 main {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
+  background: white;
 }
 
-footer {
-  background: #f1c40f; /* kuning */
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+main h2 {
+  color: #1E90FF;
+  margin-bottom: 15px;
 }
