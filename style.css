@@ -75,7 +75,7 @@ button:hover, .btn:hover {
 }
 
 /* ============================= */
-/* SECTION                        */
+/* SECTION / CARD / TABEL        */
 /* ============================= */
 section {
     padding: 60px 20px;
@@ -105,26 +105,28 @@ p {
     margin-bottom: 15px;
 }
 
-/* ============================= */
-/* CARD / OBJECT                 */
-/* ============================= */
 .card, .doc-card, .proker-item, .sekbid-item {
     background-color: rgba(255,255,255,0.9);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.card:hover, .doc-card:hover, .proker-item:hover, .sekbid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.card.show, .doc-card.show, .proker-item.show, .sekbid-item.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* ============================= */
-/* TABLES                         */
-/* ============================= */
+.card img, .doc-card img, .proker-item img, .sekbid-item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -133,6 +135,14 @@ table {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+table.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 table th, table td {
@@ -175,7 +185,3 @@ footer p {
     header h1{font-size:2rem;}
     nav a{padding:6px 12px;font-size:0.9rem;}
 }
-
-/* ============================= */
-/* JS TRIGGER ANIMATION SCROLL   */
-/* ============================= */
