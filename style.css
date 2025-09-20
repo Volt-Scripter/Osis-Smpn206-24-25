@@ -1,72 +1,199 @@
-/* Reset */
+/* ============================= */
+/* GENERAL RESET & BASE STYLES  */
+/* ============================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* biru gradient keren */
+    color: #fff;
+    line-height: 1.6;
 }
 
-/* Hero Section */
+/* ============================= */
+/* HEADER / NAVBAR STYLES        */
+/* ============================= */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* kuning emas */
+}
+
+/* ============================= */
+/* SECTION / CONTENT STYLES      */
+/* ============================= */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff6347; /* merah-oranye */
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* BUTTON STYLES                 */
+/* ============================= */
+button, .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4500; /* oren */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffd700; /* kuning */
+    color: #000;
+}
+
+/* ============================= */
+/* CARD / BOX STYLES             */
+/* ============================= */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================= */
+/* FOOTER STYLES                 */
+/* ============================= */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ============================= */
+/* SPECIFIC FOR INDEX.HTML       */
+/* ============================= */
 .hero {
-  position: relative;
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=1500&q=80') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  color: #FFD700; /* kuning */
-  margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+    font-size: 1.3rem;
 }
 
-/* Buttons */
-.menu-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+/* ============================= */
+/* SPECIFIC FOR DOKUMENTASI.HTML */
+/* ============================= */
+.docs img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
-.btn {
-  background: #1E90FF; /* biru */
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+.docs .doc-card {
+    margin-bottom: 30px;
 }
 
-.btn:hover {
-  background: #104E8B;
-  transform: scale(1.05);
+/* ============================= */
+/* SPECIFIC FOR PROKER.HTML      */
+/* ============================= */
+.proker-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Section */
-main {
-  padding: 40px;
-  text-align: center;
-  background: white;
+.proker-item {
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-main h2 {
-  color: #1E90FF;
-  margin-bottom: 15px;
+.proker-item:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* MEDIA QUERIES                 */
+/* ============================= */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
 }
