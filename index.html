@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OSIS SMPN 206 Jakarta</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSIS SMPN 206 Jakarta</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <h1>OSIS SMPN 206 Jakarta</h1>
-      <p>Mengelola Kegiatan & Program Kerja Siswa</p>
-      <button class="btn">Lihat Proker Terbaru</button>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dokumentasi.html">Dokumentasi</a>
-      <a href="proker.html">Proker</a>
-      <a href="sekbid.html">Sekbid</a>
-    </nav>
-  </header>
 
-  <section>
-    <h2>Highlight Kegiatan</h2>
-    <div class="doc-card">
-      <img src="img/kegiatan1.jpg" alt="Upacara Bendera">
-      <p>Upacara Bendera HUT Kemerdekaan RI</p>
-    </div>
-    <div class="doc-card">
-      <img src="img/kegiatan2.jpg" alt="Lomba Kebersihan">
-      <p>Lomba Kebersihan Antar Kelas</p>
-    </div>
-  </section>
+<header>
+  <div class="hero">
+    <h1>OSIS SMPN 206 Jakarta</h1>
+    <p>Mengelola Kegiatan & Program Kerja Siswa</p>
+    <button class="btn">Lihat Proker Terbaru</button>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dokumentasi.html">Dokumentasi</a>
+    <a href="proker.html">Proker</a>
+    <a href="sekbid.html">Sekbid</a>
+  </nav>
+</header>
 
-  <section>
-    <h2>Data Kegiatan</h2>
+<!-- Section Highlight -->
+<section>
+  <h2>Highlight Kegiatan</h2>
+  <div class="vertical-card">
+    <img src="https://picsum.photos/600/400?random=1" alt="Upacara Bendera">
+    <div class="caption">
+      <h3>Upacara Bendera HUT Kemerdekaan RI</h3>
+      <p>Tanggal: 17 Agustus 2025 | Tempat: Lapangan Sekolah</p>
+    </div>
+  </div>
+  <div class="vertical-card">
+    <img src="https://picsum.photos/600/400?random=2" alt="Lomba Kebersihan">
+    <div class="caption">
+      <h3>Lomba Kebersihan Antar Kelas</h3>
+      <p>Tanggal: 10 September 2025 | Tempat: Kelas & Halaman</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section Data Tabel -->
+<section>
+  <h2>Data Kegiatan</h2>
+  <div class="table-container">
     <table>
       <tr>
         <th>No</th>
@@ -54,13 +64,20 @@
         <td>10 September 2025</td>
         <td>Kelas & Halaman</td>
       </tr>
+      <tr>
+        <td>3</td>
+        <td>Kegiatan Ekstrakurikuler</td>
+        <td>25 September 2025</td>
+        <td>Ruang Serbaguna</td>
+      </tr>
     </table>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 OSIS SMPN 206 Jakarta. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2025 OSIS SMPN 206 Jakarta. All rights reserved.</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
