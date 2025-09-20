@@ -17,19 +17,17 @@ header{text-align:center;padding-bottom:20px;position:sticky;top:0;background:rg
 .hero .btn:hover{background:#ff6b6b;transform:scale(1.05);box-shadow:0 5px 10px rgba(0,0,0,0.3);}
 
 /* NAVBAR */
-nav{margin:15px;}
+nav{margin:15px;text-align:center;}
 nav a{display:inline-block;margin:5px 8px;padding:6px 12px;font-weight:600;color:#fff;background:#fcbf49;border-radius:8px;text-decoration:none;transition:all 0.3s;box-shadow:0 2px 4px rgba(0,0,0,0.2);}
 nav a:hover{transform:scale(1.05);background:#ff6b6b;box-shadow:0 4px 6px rgba(0,0,0,0.3);}
 
 /* SECTION */
-section{padding:40px 15px;margin:30px auto;background:rgba(255,255,255,0.9);border-radius:12px;opacity:0;transform:translateY(20px);transition:all 0.8s;}
-section.show{opacity:1;transform:translateY(0);}
+section{padding:40px 15px;margin:30px auto;background:rgba(255,255,255,0.9);border-radius:12px;transition:all 0.8s;}
 h2{text-align:center;font-size:1.5rem;margin-bottom:20px;}
 p{margin-bottom:10px;font-size:0.95rem;}
 
 /* VERTICAL CARD */
-.vertical-card{display:flex;flex-direction:column;align-items:center;margin-bottom:25px;opacity:0;transform:translateY(15px);transition:all 0.8s;}
-.vertical-card.show{opacity:1;transform:translateY(0);}
+.vertical-card{display:flex;flex-direction:column;align-items:center;margin-bottom:25px;transition:all 0.8s;}
 .vertical-card img{width:100%;border-radius:10px;margin-bottom:8px;transition:all 0.3s;}
 .vertical-card img:hover{transform:scale(1.05);filter:brightness(1.1);}
 .vertical-card .caption{text-align:left;width:95%;}
@@ -38,8 +36,7 @@ p{margin-bottom:10px;font-size:0.95rem;}
 
 /* TABEL */
 .table-container{overflow-x:auto;}
-table{width:100%;border-collapse:collapse;margin-top:15px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);opacity:0;transform:translateY(15px);transition:all 0.8s;}
-table.show{opacity:1;transform:translateY(0);}
+table{width:100%;border-collapse:collapse;margin-top:15px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);transition:all 0.8s;}
 th, td{padding:10px 12px;text-align:center;transition:all 0.3s;}
 th{background:#fcbf49;color:#fff;font-weight:600;}
 tr:nth-child(even){background:#f1f1f1;}
@@ -55,3 +52,11 @@ footer p{font-size:0.8rem;}
     nav a{padding:5px 10px;font-size:0.85rem;}
     .vertical-card img{width:100%;}
 }
+
+/* SCROLL ANIMATION (hanya untuk index.html) */
+body.index section,
+body.index .vertical-card,
+body.index table {opacity:0; transform:translateY(20px);}
+body.index section.show,
+body.index .vertical-card.show,
+body.index table.show {opacity:1; transform:translateY(0);}
